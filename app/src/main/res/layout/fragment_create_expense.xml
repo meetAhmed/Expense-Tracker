@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.createExpense.CreateExpenseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/et_title_parent_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filled_light_grey"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@id/et_amount_parent_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                app:met_floatingLabel="highlight"
+                app:met_hideUnderline="true"
+                app:met_textColorHint="@color/medium_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/et_amount_parent_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/filled_light_grey"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@id/category_spinner_parent_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_title_parent_view">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits=".0123456789"
+                android:hint="@string/amount"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                app:met_floatingLabel="highlight"
+                app:met_hideUnderline="true"
+                app:met_textColorHint="@color/medium_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/category_spinner_parent_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/filled_light_grey"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btnAdd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_amount_parent_view">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/categories" />
+
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/filled_black"
+            android:padding="10dp"
+            android:text="@string/add_expense"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_spinner_parent_view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+
+    <string name="add_expense">Add Expense</string>
+    <string name="add_expense_success">Expense added successfully</string>
+    <string name="home">Home</string>
+
+    <string name="total">Total</string>
+    <string name="total_with_value">%1$s Ft</string>
+    <string name="sample_total">34000 Ft</string>
+
+    <string name="title">Title</string>
+    <string name="title_required">Please enter title</string>
+    <string name="amount">Amount</string>
+    <string name="amount_required">Please enter amount</string>
+    <string name="amount_valid_required">Please enter valid amount</string>
+
+    <string name="category">Category</string>
+
+    <string-array name="categories">
+        <item>Rent</item>
+        <item>Transport</item>
+        <item>Kitchen</item>
+        <item>Family</item>
+        <item>Friends</item>
+        <item>Charity</item>
+        <item>Self</item>
+        <item>Food</item>
+        <item>Home</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>
